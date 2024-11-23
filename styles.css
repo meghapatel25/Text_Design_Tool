@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    height: 65px;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around;
+    background: linear-gradient( to top, rgba(56, 169, 221, 0.847),#2d7ad9dd);
+}
+.icons{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons :hover{
+    background: #3e87e0dd;
+}
+.icons a{
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.items{
+    font-size: 17px;
+    color: #e5ebf6;
+}
+.canvas{
+    width: 90%;
+    max-width: 600px;
+    height: 480px;
+    margin: 20px auto;
+    border: 2px #ccc;
+    background-color: #f0ecec;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ft{
+    display:flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc;
+    gap:10px;
+    padding:20px;
+}
+
+#font-family {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 1rem;
+}
+#font-family:focus {
+    border: 1px solid #ccc; /* Keep the border color unchanged */
+    outline: none; /* Remove focus outline */
+}
+
+.box{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.btns{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    cursor:pointer;
+    background-color: white;
+}
+#number-field{
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+}
+#number-field:focus-visible{
+    outline:none;
+}
+
+button:hover{
+    background-color:#e0e0e0 ;
+}
+
+#center,#bold,#italic,#underline{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#bold{
+    font-weight:bolder;
+}
+#italic{
+    font-style: italic;
+}
+#underline{
+    text-decoration: underline;
+}
+footer{
+    display:flex;
+    justify-content: center;
+    border-top: 1px solid #ccc;
+    gap:10px;
+    padding:21px;
+}
+#btn{
+    background: #c2bebe;
+    font-weight:700;
+    padding:5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+#btn:hover{
+    background-color:#e0e0e0 ; 
+}
+.text-element {
+    font-size: 16px;
+    color: black;
+    cursor: move; /* Show move cursor */
+    position: absolute;
+    white-space: nowrap; /* Prevent text wrapping */
+    user-select: none; /* Prevent text selection during dragging */
+}
+.text-element:focus {
+    outline: none; /* Remove focus outline when editing */
+    cursor: text; /* Change cursor to text while editing */
+}
+
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    appearance: none;
+    margin:0;
+}
+/* Firefox */
+input[type=number]{
+    appearance: textfield;
+}
+
+
+@media (max-width: 768px) {
+    .canvas {
+        height: 200px; /* Reduce canvas height */
+    }
+
+    footer {
+        flex-direction: column; /* Stack controls vertically */
+        align-items: center;
+    }
+
+    .box {
+        margin: 10px 0; /* Add spacing between elements */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: auto; /* Adjust height */
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .icons a {
+        font-size: 16px; /* Reduce icon size */
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
